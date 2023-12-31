@@ -1,227 +1,27 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@layer base{
-  @font-face {
-    font-family: 'ClashDisplayRegular';
-    src: url("../assets/fonts/ClashDisplay/ClashDisplay-Regular.woff2").format("woff2");
-    font-weight: 400;
-    font-display: swap;
-    font-style: normal;
-  }
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
 
-  @font-face {
-    font-family: 'ClashDisplayMedium';
-    src: url("../assets/fonts/ClashDisplay/ClashDisplay-Medium.woff2").format("woff2");
-    font-weight: 500;
-    font-display: swap;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'ClashDisplayBold';
-    src: url("../assets/fonts/ClashDisplay/ClashDisplay-Bold.woff2").format("woff2");
-    font-weight: 700;
-    font-display: swap;
-    font-style: normal;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
 }
 
-
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
-
-body{
-  background-color: #42113C; 
-  /* #820263; */
-  height: 100vh;
-  color: #fff;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  scroll-behavior: smooth; 
-}
-
-
-
-#introSubTitle{
-  font-size: large;
-}
-
-#emp_{
-  display: inline;
-}
-
-.emphasis{
-  color: #FA9F42;
-}
-
-/* .intro-msg{
-  position: relative;
-  left:auto;
-} */
-
-#heroImage{
-  position: relative;
-  left: 20%;
-}
-
-/* .banner-description{
-  position:relative;
-  left:;
-} */
-
-.whole{
-  background-image: url("../assets/images/photos/books.jpg");
-}
-
-/* .grayscale {
-  filter: grayscale(100%);
-} */
-
-.brand-image{
-  width: 100%;
-}
-
-.slidebox{
-  max-width: 1020px;
-  margin: 100px auto;
-  height: 100px;
-}
-
-h2::after{
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 4px;
-  background-color: #fff;
-  bottom: -20px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-}
-
-.logo-slider .item{
-  background-color: #820263;
-  box-shadow: 0 4px 5px #820263;
-  border-radius: 8px;
-  padding: 15px;
-  border: 2px solid #fff;
-}
-
-.logo-slider{
-position: relative;
-top: 36px;
-}
-
-.slick-slide{
-  margin-top: -1px;
-}
-
-.slick-dots li.slick-active button::before{
-  color: #ff5722;
-}
-
-.slick-dots li button::before{
-  font-size: 12px;
-}
-
-slick-next::before,
-slick-prev::before{
-  color: #ff8159;
-  font-size: 28px;
-}
-
-.item:hover{
-  display: block;
-  transition: all ease 0.3s;
-  transform: scale(1.1) translateY(-5px);
-}
-
-.form-body{
-  position: relative;
-  top:30%;
-  left: 26%
-}
-
-.regform-btn{
-  margin-left: 120px;
-}
-
-.logform-btn{
-  margin-left: 100px;
-}
-
-.btnUp{
-  margin-top: -1%;
-}
-
-.session-btn{
-  margin-top: -4%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 700px){
-  .video-wrapper{
-    display:none;
-  }
-
-  /* .banner{
-    margin-top: -10%;
-  } */
-
-  .banner-description h1{
-    font-size: large;
-    margin:3%;
-  }
-
-  .banner-description h1 p{
-    font-size: medium;
-  }
-
-  #header{
-    display:none;
-  }
-
-  .App{
-    height: auto;
-  }
-}
-

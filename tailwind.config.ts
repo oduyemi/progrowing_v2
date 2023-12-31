@@ -1,24 +1,20 @@
-export default {
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    "./src/**/*.css",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    fontFamily: {
-      sans: ['ClashDisplayRegular'],
+    extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
     },
-    colors: {
-      yel: "#FB8B24",
-      whi: "#F4F4F9",
-      // ppl: "#820263",
-      ppl: "#42113C",
-      blu: "#DABFFF",
-      fade: "#DABFFF"
-    }
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/aspect-ratio'),
-  ],
-};
+  plugins: [],
+}
+export default config
