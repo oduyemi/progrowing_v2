@@ -62,7 +62,7 @@ export const FindMentor = () => {
         <div className="relative flex w-full md:w-1/2 justify-center">
           <div className="relative">
             <Image
-              src="/images/photos/hero2.png"
+              src="/images/photos/langboard.png"
               alt="mentor"
               width={480}
               height={480}
