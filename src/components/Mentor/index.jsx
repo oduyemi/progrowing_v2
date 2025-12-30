@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import {
   Box,
   Typography,
@@ -12,6 +13,8 @@ import {
   Checkbox,
 } from "@mui/material";
 import CustomButton from "../elements/Button";
+import Alert from "@mui/material/Alert";
+import Snackbar from "@mui/material/Snackbar";
 
 
 const programmingLanguages = [
@@ -59,6 +62,63 @@ const platformsAndTools = [
 ];
 
 export const MentorForm = () => {
+  const [status, setStatus] = useState("idle"); 
+  const [toast, setToast] = useState({
+    open: false,
+    message: "",
+    severity: "success",
+  });
+
+  useEffect(() => {
+    if (toast.open && toast.severity === "success") {
+      const timer = setTimeout(() => {
+        setToast((t) => ({ ...t, open: false }));
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [toast]);
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    const form = e.currentTarget;
+    const data = new FormData(form);
+  
+    // 🕷 Honeypot check
+    if (data.get("company")) return;
+  
+    setStatus("submitting");
+  
+    try {
+      const res = await fetch("https://formspree.io/f/mpqzeakd", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+  
+      if (res.ok) {
+        form.reset();
+        setToast({
+          open: true,
+          message: "Mentor registration submitted successfully!",
+          severity: "success",
+        });
+      } else {
+        throw new Error();
+      }
+    } catch {
+      setToast({
+        open: true,
+        message: "Submission failed. Please try again.",
+        severity: "error",
+      });
+    } finally {
+      setStatus("idle");
+    }
+  };  
+
   return (
     <Box className="relative h-[100svh] overflow-y-auto overscroll-contain">
       <Box className="pt-36 pb-28 px-6">
@@ -77,13 +137,21 @@ export const MentorForm = () => {
           </Box>
 
           {/* FORM CARD */}
-          <Box className="mt-14 mx-auto max-w-2xl rounded-2xl bg-white px-8 sm:px-10 py-10 sm:py-12 shadow-[0_25px_80px_rgba(0,0,0,0.12)] ring-1 ring-black/5">
+          <Box className="mt-14 mx-auto max-w-2xl rounded-2xl bg-white px-8 py-10 shadow-xl">
+            <input
+              type="text"
+              name="company"
+              tabIndex={-1}
+              autoComplete="off"
+              className="hidden"
+            />
+
             <Box
               component="form"
-              action="https://formspree.io/f/mpqzeakd"
-              method="POST"
+              onSubmit={handleSubmit}
               className="space-y-9"
             >
+
               {/* Formspree Meta */}
               <input type="hidden" name="_subject" value="New Mentor Registration" />
 
@@ -169,15 +237,30 @@ export const MentorForm = () => {
               {/* CTA */}
               <CustomButton
                 type="submit"
+                disabled={status === "submitting"}
                 fullWidth
-                className="h-[56px] mt-6 bg-yellow-600 hover:bg-yellow-500 shadow-md hover:shadow-lg rounded-md transition-all text-base"
+                className="h-[56px] bg-yellow-600 hover:bg-yellow-500"
               >
-                Register as Mentor
+                {status === "submitting" ? "Submitting..." : "Register as Mentor"}
               </CustomButton>
             </Box>
           </Box>
         </Box>
       </Box>
+      <Snackbar
+        open={toast.open}
+        onClose={() => setToast((t) => ({ ...t, open: false }))}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+      >
+        <Alert
+          onClose={() => setToast((t) => ({ ...t, open: false }))}
+          severity={toast.severity}
+          variant="filled"
+          sx={{ borderRadius: 2 }}
+        >
+          {toast.message}
+        </Alert>
+      </Snackbar>
     </Box>
   );
 };
