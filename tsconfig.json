@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
-, "src/components/Header.jsx", "src/app/courses/page.jsx", "src/app/layout.jsx", "src/app/page.jsx", "src/components/navigation/Header.jsx"  ],
+, "src/components/Header.jsx", "src/app/courses/page.jsx", "src/app/layout.jsx", "src/app/page.jsx", "src/components/navigation/Header.jsx", "src/components/elements/Button.jsx"  ],
   "exclude": [
     "node_modules"
   ]
