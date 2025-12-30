@@ -1,0 +1,38 @@
+export const mentors = [
+  {
+    id: 1,
+    name: "Opeyemi Oduyemi",
+    field: "Fullstack Development",
+    expertise: ["frontend", "fullstack", "backend"],
+    years: 6,
+    bio: "Turning ideas to real-life project is my calling",
+    image: "/images/photos/mentors/yemi.jpeg",
+  },
+  {
+    id: 2,
+    name: "Amaka Johnson",
+    field: "Frontend Development",
+    expertise: ["frontend"],
+    years: 5,
+    bio: "Focused on accessible, high-performance UI with React.",
+    image: "",
+  },
+  {
+    id: 3,
+    name: "Daniel Okoye",
+    field: "Data Science",
+    expertise: ["datascience"],
+    years: 6,
+    bio: "Turning data into actionable business insights.",
+    image: "/images/mentors/mentor-3.jpg",
+  },
+  {
+    id: 4,
+    name: "Fatima Bello",
+    field: "Full Stack Development",
+    expertise: ["fullstack", "backend"],
+    years: 8,
+    bio: "End-to-end product engineering for startups.",
+    image: "/images/mentors/mentor-4.jpg",
+  },
+];
