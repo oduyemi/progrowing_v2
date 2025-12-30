@@ -24,7 +24,7 @@ export const mentors = [
     expertise: ["datascience"],
     years: 6,
     bio: "Turning data into actionable business insights.",
-    image: "/images/mentors/mentor-3.jpg",
+    image: "",
   },
   {
     id: 4,
@@ -33,6 +33,6 @@ export const mentors = [
     expertise: ["fullstack", "backend"],
     years: 8,
     bio: "End-to-end product engineering for startups.",
-    image: "/images/mentors/mentor-4.jpg",
+    image: "",
   },
 ];
