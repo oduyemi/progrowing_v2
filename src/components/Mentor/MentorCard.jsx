@@ -1,7 +1,5 @@
 "use client";
-
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { PitchModal } from "./PitchModal";
