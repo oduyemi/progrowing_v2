@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const navLinks = [
   // { label: 'Courses', href: '/courses' },
-  { label: 'Forum', href: '/forum' },
+  { label: 'Forum', href: 'https://forum.progrowing.org', external: true },
   { label: 'Learning Centre', href: 'https://learn.progrowing.org', external: true },
   { label: 'Taskify', href: 'taskify' },
 ];
