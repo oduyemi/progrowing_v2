@@ -62,6 +62,10 @@ const platformsAndTools = [
   "Prometheus",
   "Grafana",
   "ELK Stack",
+  "Jira / Confluence",
+  "Asana / Trello",
+  "Productboard / Dovetail / UserTesting",
+  "Supabase / Chisel"
 ];
 
 export const MentorForm = () => {
