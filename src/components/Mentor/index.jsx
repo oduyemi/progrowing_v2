@@ -169,7 +169,7 @@ export const MentorForm = () => {
                   <FormControlLabel value="software-engineering" control={<Radio />} label="Software Engineering" />
                   <FormControlLabel value="data-analytics" control={<Radio />} label="Data & Analytics" />
                   <FormControlLabel value="devops-cloud" control={<Radio />} label="DevOps / Cloud" />
-                  <FormControlLabel value="sysadmin" control={<Radio />} label="Systems Admin" />
+                  <FormControlLabel value="sysadmin" control={<Radio />} label="Systems Admin / Infrastructure" />
                 </RadioGroup>
               </FormControl>
 
