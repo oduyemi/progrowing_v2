@@ -51,6 +51,9 @@ const platformsAndTools = [
   "Azure",
   "Google Cloud",
   "Apache Spark",
+  "Figma",
+  "Adobe XD",
+  "Adobe Illustrator",
   "Airflow",
   "Kafka",
   "Snowflake",
@@ -166,6 +169,8 @@ export const MentorForm = () => {
                   Area of focus
                 </FormLabel>
                 <RadioGroup row name="area_of_focus">
+                <FormControlLabel value="design" control={<Radio />} label="Design / Product" />
+                <FormControlLabel value="productmgt" control={<Radio />} label="Product Management" />
                   <FormControlLabel value="software-engineering" control={<Radio />} label="Software Engineering" />
                   <FormControlLabel value="data-analytics" control={<Radio />} label="Data & Analytics" />
                   <FormControlLabel value="devops-cloud" control={<Radio />} label="DevOps / Cloud" />
