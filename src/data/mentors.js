@@ -35,4 +35,13 @@ export const mentors = [
     bio: "End-to-end product engineering for startups.",
     image: "",
   },
+  // {
+  //   id: 5,
+  //   name: "Sunday Nwabiani",
+  //   field: "Systems Administration",
+  //   expertise: ["sysadmin"],
+  //   years: 3,
+  //   bio: "Turning ideas to real-life project is my calling",
+  //   image: "/images/photos/mentors/yemi.jpeg",
+  // }
 ];
