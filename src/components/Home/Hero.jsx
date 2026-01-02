@@ -125,21 +125,22 @@ export const Hero = () => {
                 Find a Mentor
               </motion.button>
             </Link>
-
-            <motion.button
-              whileFocus={{
-                boxShadow: '0 0 0 3px rgba(234,179,8,0.25)',
-              }}
-              transition={{ duration: 0.2 }}
-              className="
-                px-6 py-3 border border-gray-300
-                rounded-md font-medium
-                hover:border-yellow-400 hover:text-yellow-600
-                focus:outline-none transition
-              "
-            >
-              Become a Mentor →
-            </motion.button>
+            <Link href="/be-mentor">
+              <motion.button
+                whileFocus={{
+                  boxShadow: '0 0 0 3px rgba(234,179,8,0.25)',
+                }}
+                transition={{ duration: 0.2 }}
+                className="
+                  px-6 py-3 border border-gray-300
+                  rounded-md font-medium
+                  hover:border-yellow-400 hover:text-yellow-600
+                  focus:outline-none transition
+                "
+              >
+                Become a Mentor →
+              </motion.button>
+            </Link>
           </div>
         </motion.div>
 
