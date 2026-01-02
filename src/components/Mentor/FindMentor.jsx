@@ -59,7 +59,9 @@ export const FindMentor = () => {
               <option value="fullstack">Full Stack Development</option>
               <option value="datascience">Data Science</option>
               <option value="devops">DevOps</option>
-              <option value="sysadmin">Systems Admin</option>
+              <option value="sysadmin">Systems Admin / Infrastructure</option>
+              <option value="design">Product Design</option>
+              <option value="product">Product Management</option>
               <option value="dataanalysis">Excel / Data Analysis</option>
               <option value="powerbi">Power BI / Python</option>
               <option value="testing">Software Testing</option>
