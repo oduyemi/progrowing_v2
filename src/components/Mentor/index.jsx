@@ -169,10 +169,10 @@ export const MentorForm = () => {
                   Area of focus
                 </FormLabel>
                 <RadioGroup row name="area_of_focus">
+                <FormControlLabel value="cybersec" control={<Radio />} label="Cyber Security" />
                 <FormControlLabel value="design" control={<Radio />} label="Design / Product" />
-                <FormControlLabel value="productmgt" control={<Radio />} label="Product Management" />
-                  <FormControlLabel value="software-engineering" control={<Radio />} label="Software Engineering" />
-                  <FormControlLabel value="data-analytics" control={<Radio />} label="Data & Analytics" />
+                  <FormControlLabel value="software" control={<Radio />} label="Software Engineering" />
+                  <FormControlLabel value="data" control={<Radio />} label="Data & Analytics" />
                   <FormControlLabel value="devops-cloud" control={<Radio />} label="DevOps / Cloud" />
                   <FormControlLabel value="sysadmin" control={<Radio />} label="Systems Admin / Infrastructure" />
                 </RadioGroup>
@@ -180,6 +180,7 @@ export const MentorForm = () => {
 
               {/* PRIMARY EXPERTISE */}
               <TextField name="primary_expertise" select label="Primary expertise" fullWidth>
+                <MenuItem value="cybersec">Cyber Security</MenuItem>
                 <MenuItem value="frontend">Frontend Development</MenuItem>
                 <MenuItem value="backend">Backend Development</MenuItem>
                 <MenuItem value="fullstack">Full Stack Development</MenuItem>
@@ -191,6 +192,8 @@ export const MentorForm = () => {
                 <MenuItem value="devops">DevOps Engineering</MenuItem>
                 <MenuItem value="cloud">Cloud Engineering</MenuItem>
                 <MenuItem value="platform">Platform Engineering</MenuItem>
+                <MenuItem value="design">Product Design</MenuItem>
+                <MenuItem value="product">Product Management</MenuItem>
               </TextField>
 
               {/* EXPERIENCE */}
