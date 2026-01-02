@@ -1,5 +1,4 @@
 "use client";
-
 import { useSearchParams } from "next/navigation";
 import { mentors } from "@/data/mentors";
 import { MentorCard } from "@/components/Mentor/MentorCard";

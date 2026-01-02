@@ -1,9 +1,8 @@
 "use client";
-
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import Button from "./elements/Button";
+import Button from "../elements/Button";
 
 export const FindMentor = () => {
   const router = useRouter();
@@ -55,9 +54,12 @@ export const FindMentor = () => {
             >
               <option value="">Choose expertise</option>
               <option value="backend">Backend Development</option>
+              <option value="cybersecurity">Cyber Security</option>
               <option value="frontend">Frontend Development</option>
               <option value="fullstack">Full Stack Development</option>
               <option value="datascience">Data Science</option>
+              <option value="devops">DevOps</option>
+              <option value="sysadmin">Systems Admin</option>
               <option value="dataanalysis">Excel / Data Analysis</option>
               <option value="powerbi">Power BI / Python</option>
               <option value="testing">Software Testing</option>

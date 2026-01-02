@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { X, Loader2, Mail, Phone } from "lucide-react";
 import { useState } from "react";

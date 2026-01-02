@@ -178,6 +178,7 @@ export const MentorForm = () => {
                 <MenuItem value="backend">Backend Development</MenuItem>
                 <MenuItem value="fullstack">Full Stack Development</MenuItem>
                 <MenuItem value="mobile">Mobile Development</MenuItem>
+                <MenuItem value="sys-admin">Systems Admin</MenuItem>
                 <MenuItem value="data-analytics">Data Analytics</MenuItem>
                 <MenuItem value="data-engineering">Data Engineering</MenuItem>
                 <MenuItem value="machine-learning">Machine Learning</MenuItem>
@@ -188,7 +189,7 @@ export const MentorForm = () => {
 
               {/* EXPERIENCE */}
               <TextField name="experience_years" select label="Years of experience" fullWidth>
-                <MenuItem value="0-2">0–2 years</MenuItem>
+                {/* <MenuItem value="0-2">0–2 years</MenuItem> */}
                 <MenuItem value="3">3 years</MenuItem>
                 <MenuItem value="4">4 years</MenuItem>
                 <MenuItem value="5">5 years</MenuItem>
