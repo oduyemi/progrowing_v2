@@ -28,11 +28,11 @@ export const mentors = [
   },
   {
     id: 4,
-    name: "Fatima Bello",
-    field: "Full Stack Development",
-    expertise: ["fullstack", "backend"],
-    years: 8,
-    bio: "End-to-end product engineering for startups.",
+    name: "Vincent Odume",
+    field: "Backend Development",
+    expertise: ["backend"],
+    years: 3,
+    bio: "Software engineer crafting fast, impactful APIs — clean code, real-world impact, always learning.",
     image: "",
   },
   {
@@ -43,14 +43,5 @@ export const mentors = [
     years: 7,
     bio: "Senior Systems Administrator with experience designing, securing, and operating hybrid IT environments across Linux, Windows, Active Directory, Azure AD, monitoring, and automation.",
     image: "/images/photos/mentors/sunday.jpeg",
-  },
-  // {
-  //   id: 6,
-  //   name: "Vincnet Odume",
-  //   field: "Backend Development",
-  //   expertise: ["backend"],
-  //   years: 3,
-  //   bio: "Senior Systems Administrator with 7+ years of experience designing, securing, and operating hybrid IT environments across Linux, Windows, Active Directory, Azure AD, monitoring, and automation.",
-  //   image: "/image/photos/mentors/vincent.jpeg",
-  // }
+  }
 ];
