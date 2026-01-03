@@ -35,13 +35,22 @@ export const mentors = [
     bio: "End-to-end product engineering for startups.",
     image: "",
   },
+  {
+    id: 5,
+    name: "Sunday Nwabiani",
+    field: "Systems Administration",
+    expertise: ["sysadmin"],
+    years: 7,
+    bio: "Senior Systems Administrator with 7+ years of experience designing, securing, and operating hybrid IT environments across Linux, Windows, Active Directory, Azure AD, monitoring, and automation.",
+    image: "/image/photos/mentors/sunday.jpeg",
+  },
   // {
-  //   id: 5,
-  //   name: "Sunday Nwabiani",
-  //   field: "Systems Administration",
-  //   expertise: ["sysadmin"],
+  //   id: 6,
+  //   name: "Vincnet Odume",
+  //   field: "Backend Development",
+  //   expertise: ["backend"],
   //   years: 3,
-  //   bio: "Turning ideas to real-life project is my calling",
-  //   image: "/images/photos/mentors/yemi.jpeg",
+  //   bio: "Senior Systems Administrator with 7+ years of experience designing, securing, and operating hybrid IT environments across Linux, Windows, Active Directory, Azure AD, monitoring, and automation.",
+  //   image: "/image/photos/mentors/vincent.jpeg",
   // }
 ];
