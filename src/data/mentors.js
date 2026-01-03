@@ -41,8 +41,8 @@ export const mentors = [
     field: "Systems Administration",
     expertise: ["sysadmin"],
     years: 7,
-    bio: "Senior Systems Administrator with 7+ years of experience designing, securing, and operating hybrid IT environments across Linux, Windows, Active Directory, Azure AD, monitoring, and automation.",
-    image: "/image/photos/mentors/sunday.jpeg",
+    bio: "Senior Systems Administrator with experience designing, securing, and operating hybrid IT environments across Linux, Windows, Active Directory, Azure AD, monitoring, and automation.",
+    image: "/images/photos/mentors/sunday.jpeg",
   },
   // {
   //   id: 6,
